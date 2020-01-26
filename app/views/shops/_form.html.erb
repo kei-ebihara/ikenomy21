@@ -1,0 +1,41 @@
+<%= form_with model: shop, local: true do |form| %>
+  <%= render "shared/errors", obj: shop %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :new_image %>
+    <%= form.file_field :new_image, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 10, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :tel %>
+    <%= form.telephone_field :tel, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_area :address, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :homepage %>
+    <%= form.url_field :homepage, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :opentime %>
+    <%= form.time_field :opentime, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :closetime %>
+    <%= form.time_field :closetime, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :holiday %>
+    <%= form.text_field :holiday, class: "form-control" %>
+  </div>
+  <%= form.submit class: "btn btn-primary" %>
+  <%= link_to '戻る', :back, class: "btn btn-secondary" %>
+<% end %>
